@@ -1,11 +1,6 @@
 package sg.edu.nus.iss.day22workshop.model;
 
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
-
 import org.joda.time.DateTime;
-import org.joda.time.Instant;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
