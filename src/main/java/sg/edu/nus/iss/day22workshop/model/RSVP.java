@@ -88,7 +88,6 @@ public class RSVP {
                 .forPattern("dd-MM-yyyy")
                 .parseDateTime(rs.getString("confirmation_date")));
         rsvp.setConfirmationDate(d);
-        // rsvp.setConfirmationDate(d.atZone(ZoneOffset.UTC).toEpochSecond() * 1000L);
         rsvp.setComments(rs.getString("comments"));
 
         return rsvp;
@@ -110,11 +109,6 @@ public class RSVP {
         rsvp.setName(httpRequest.getParameter("name"));
         rsvp.setEmail(httpRequest.getParameter("email"));
         rsvp.setPhone(httpRequest.getParameter("phone"));
-        // DateTime confirmationDate = new DateTime(DateTimeFormat
-        //         .forPattern("dd-MM-yyyy")
-        //         .parseDateTime(httpRequest.getParameter("confirmation_date")));
-        // rsvp.setConfirmationDate(confirmationDate);
-
         DateTime d = new DateTime(DateTimeFormat
                 .forPattern("dd-MM-yyyy")
                 .parseDateTime(httpRequest.getParameter("confirmation_date")));
